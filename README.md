@@ -7,9 +7,9 @@ Generate "Random" Name based on first letter/number
 Save Name
 Repeat for Family Member, Friend, Pet to create Band/Team Name
 
-![Front](https://ibb.co/dpGsmk "Front Pages")
+![Front](Front.jpg "Front Pages")
 
-![Table](https://ibb.co/no0Pz5 "Table 1")
+![Table](Table1.jpg "Table 1")
 
 #### Table #1
 Store color, ABC for street letters, numbers
