@@ -10,6 +10,6 @@ Repeat for Family Member, Friend, Pet to create Band/Team Name
 ###
 
 
-![Front]: (https://ibb.co/dpGsmk "Front Pages")
+![Front](https://ibb.co/dpGsmk "Front Pages")
 
-![Table]: (https://ibb.co/no0Pz5 "Table 1")
+![Table](https://ibb.co/no0Pz5 "Table 1")
