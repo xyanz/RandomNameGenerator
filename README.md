@@ -19,3 +19,4 @@ Name Generated, Pet/Friend Name, Band/Team Name
 #### Post MVP Bonus
 Get name API to get name meaning, origin, history
 Rotate through several name generator genres
+Allow user to choose filter options (birth month || initial || street name || fav num)
