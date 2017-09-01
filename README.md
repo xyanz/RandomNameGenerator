@@ -20,3 +20,4 @@ Name Generated, Pet/Friend Name, Band/Team Name
 Get name API to get name meaning, origin, history
 Rotate through several name generator genres
 Allow user to choose filter options (birth month || initial || street name || fav num)
+Allow user to edit filter option selections to add key, values
