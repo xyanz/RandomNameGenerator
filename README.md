@@ -7,6 +7,7 @@ Generate "Random" Name based on first letter/number
 Save Name
 Repeat for Family Member, Friend, Pet to create Band/Team Name
 
+![Landing Page](landing_page.png)
 ![Table Layout](kate_table_pic.jpg)
 
 ![Front](Front.jpg "Front Pages")
