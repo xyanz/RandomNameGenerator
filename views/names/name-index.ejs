@@ -1,0 +1,14 @@
+
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Name Generator</title>
+</head>
+<body>
+  <% for (let name of data) { %>
+    <div class='name'>
+      <p><%= name.letter %> : <%= name.lettermatch %></p>
+    </div>
+  <% } %>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Name Generator</title>
+</head>
+<body>
+  <header>
+    <h1>Random Name Generator</h1>
+  </header>
+  <main>
+    <div class="container">
+
+      <form method='POST' action='/names' class='generate-form'>
+        <label for='birthMonth_id'> Birth Month
+          <select name="birthMonth_id" id="birthMonthSelect" type='text'>
+            <option value="january">January</option>
+            <option value="february">February</option>
+            <option value="march">March</option>
+            <option value="april">April</option>
+            <option value="may">May</option>
+            <option value="june">June</option>
+            <option value="july">July</option>
+            <option value="august">August</option>
+            <option value="september">September</option>
+            <option value="october">October</option>
+            <option value="november">November</option>
+            <option value="december">December</option>
+          </select>
+        </label>
+        <input type='text' placeholder='First Name' name='FirstName' />
+        <input type='submit' value='Generate!'/>
+      </form>
+    </div>
+  </main>
+  <footer>
+
+  </footer>
+</body>
+</html>
