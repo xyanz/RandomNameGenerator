@@ -14,19 +14,19 @@ module.exports = {
     `);
   },
   findLetterMatch(name) {
-    const letter = req.body.name[0];
+    name.FirstName = name.FirstName[0];
+    console.log(name.FirstName, 'FirstName')
     return db.one(`
-      SELECT names.lettermatch
+      SELECT names.letterMatch
       FROM names
-      WHERE letter = ${letter}
+      WHERE names.letter = $/FirstName/
       `, name)
   },
   //Get month match based on month
   findMonthMatch(month) {
     console.log(month, 'month')
-    const monthID = month.birthMonth_id;
     return db.one(`
-      SELECT *
+      SELECT months.monthMatch
       FROM months
       WHERE months.month = $/birthMonth_id/;
       `, month)

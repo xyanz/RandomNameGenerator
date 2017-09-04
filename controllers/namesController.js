@@ -25,9 +25,14 @@ module.exports = {
   },
   create(req, res, next) {
     namesDB.findMonthMatch(req.body)
-    .then((month) => {
-      console.log(month, 'inside create controller');
-      res.locals.month = month;
+    .then((gen) => {
+      res.locals.gen = gen.monthmatch;
+      console.log(res.locals.gen, 'THIS IS GEN')
+    })
+    namesDB.findLetterMatch(req.body)
+    .then((gen) => {
+      res.locals.gen += gen.lettermatch;
+      console.log(res.locals.gen, 'THIS IS GEN2')
       next();
     })
     .catch(err => next(err));

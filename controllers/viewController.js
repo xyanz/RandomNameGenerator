@@ -2,7 +2,7 @@ module.exports = {
 
   handleCreate(req, res) {
     res.render('names/generate-index', {
-      data: res.locals.month,
+      data: res.locals.gen,
     });
   },
    show406(err, req, res, next) {
