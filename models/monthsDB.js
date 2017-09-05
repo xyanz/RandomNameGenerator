@@ -2,11 +2,8 @@ const pgp = require('pg-promise')();
 const dbConfig = require('../config/dbConfig');
 const db = pgp(dbConfig);
 
-//
-
 
 module.exports = {
-  //Get name match based on first month of name
   findAll() {
     return db.many(`
       SELECT *

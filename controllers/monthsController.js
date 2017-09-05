@@ -1,7 +1,8 @@
 const monthsDB = require('../models/monthsDB');
 
 module.exports = {
-    getOne(req, res, next) {
+  //Get single month
+  getOne(req, res, next) {
     monthsDB.findById(req.params.id)
       .then((month) => {
         res.locals.month = month;
@@ -9,11 +10,13 @@ module.exports = {
       })
       .catch(err => next(err));
   },
+  //Destroy single month
   destroy(req, res, next) {
     monthsDB.destroy(req.params.id)
       .then(() => next())
       .catch(err => next(err));
   },
+  //Get all months
   index(req, res, next) {
     monthsDB.findAll()
       .then((months) => {
@@ -22,6 +25,7 @@ module.exports = {
       })
       .catch(err => next(err));
   },
+  //Empty month template for new form
   emptyMonth(req, res, next) {
     const emptyMonth = {
       id:         null,
@@ -31,6 +35,7 @@ module.exports = {
     res.locals.month = emptyMonth;
     next();
   },
+  //Save new month to db
   save(req, res, next) {
     monthsDB.save(req.body)
       .then((month) => {
@@ -39,6 +44,7 @@ module.exports = {
       })
       .catch(err => next(err));
   },
+
   update(req, res, next) {
     console.log(req.body, 'update controller');
     monthsDB.update(req.body)

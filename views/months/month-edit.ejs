@@ -1,4 +1,5 @@
 <% include ../partials/boilerplate %>
+
 <div class="container-edit">
   <form method='POST' action='/months/<%= data.id %>?_method=PUT'>
     <!-- passing id as a part of the body, but the input field is set to hidden, so not to render on the page -->
@@ -9,4 +10,5 @@
       <input id="partial-edit-button" type='submit' value='Edit' />
   </form>
 </div>
+
 <% include ../partials/footer %>

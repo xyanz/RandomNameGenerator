@@ -13,32 +13,36 @@ const app = express();
 //Set Views
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+
+//Set folder for CSS and images
 app.use( express.static( path.join( __dirname, 'public' )));
 
-// Set up logging
+//Set up logging
 app.use(logger('dev'));
 
+//Set up body parser
 app.use(bodyParser.urlencoded({
   extended: false,
 }));
 app.use(bodyParser.json());
+
+//Setup override method
 app.use(methodOverride('_method'));
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-app.use(methodOverride('_method'));
 
-/* ROUTES */
+//Setup month/names routes
 app.use('/names', namesRouter);
 app.use('/months', monthsRouter);
 
-
+//Route for landing page
 app.get('/', (req, res) => {
   res.render('index')
 });
 
-//Set up a listener on PORT
+//Set up a listener on PORT and env info log
 app.listen(PORT, () => {
   console.log(`Server up and listening on port ${PORT}, in ${app.get('env')} mode.`);
 });

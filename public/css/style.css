@@ -1,3 +1,5 @@
+/*Custom cheri font
+Downloaded from http://www.fontbros.com */
 @font-face {
     font-family: cheri;
     src: url(/fonts/cheri/CHERI___.TTF);
@@ -16,6 +18,7 @@ body {
   margin: 110px auto;
   width: 100%;
 }
+/*Edit Page Container*/
 .container-edit{
   justify-content: space-around;
   position: absolute;
@@ -24,6 +27,7 @@ body {
   color: white;
   /*background-color: rgba(255,90,95, .7);*/
 }
+/*Partial Page Container*/
 .container-partial{
   text-align: center;
   margin: 0px auto;
@@ -72,7 +76,7 @@ option {
   text-indent: 5px;
   text-align-last: center;
 }
-
+/*Partial edit Cloud*/
 #partial-edit-button {
   line-height: 5;
   color: white;
@@ -89,6 +93,7 @@ option {
   padding-bottom: 50px;
   margin-top: 50px;
 }
+/*Partial Cloud*/
 #partial-button {
   line-height: 6;
   color: white;
@@ -105,6 +110,7 @@ option {
   padding-bottom: 50px;
   margin-top: 50px;
 }
+/*Landing Page Cloud*/
 #generate-button {
     line-height: 3.5;
     color: white;
@@ -159,11 +165,13 @@ nav ul li a {
 nav ul li:hover {
   text-shadow:5px 5px 10px yellow;
 }
+/*Database results*/
 #data {
   padding-top: 5px;
   color: white;
   font-size: 22px;
 }
+/*Sindle month/name div*/
 .single {
   margin-top: 100px;
   font-size: 72px;
@@ -179,6 +187,7 @@ nav ul li:hover {
   color: rgb(44,101,139);
   text-align: center;
 }
+/*Generated Name Page Cloud*/
 #generate-index-button {
   margin: 0 auto;
   display: block;

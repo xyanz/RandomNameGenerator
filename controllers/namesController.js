@@ -33,11 +33,11 @@ module.exports = {
     namesDB.findLetterMatch(req.body)
     .then((gen) => {
       res.locals.gen += (` ${gen.lettermatch}`);
-      //next function to follow
       next();
     })
     .catch(err => next(err));
   },
+
   save(req, res, next) {
     namesDB.save(req.body)
       .then((name) => {
