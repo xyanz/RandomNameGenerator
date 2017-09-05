@@ -1,0 +1,12 @@
+<% include ../partials/boilerplate %>
+<div class="container-edit">
+  <div class='single'>
+    <a href="/months/<%= data.id %>/edit">
+      <h1><%= data.month%> <%= data.monthmatch %></h1>
+    <a href="/months/<%= data.id %>/edit"></a>
+    <form action="/months/<%= data.id %>?_method=Delete" method="Post">
+      <input id='partial-edit-button' type="Submit" value="Delete"/>
+    </form>
+  </div>
+</div>
+<% include ../partials/footer %>

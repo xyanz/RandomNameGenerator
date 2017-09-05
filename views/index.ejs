@@ -1,35 +1,51 @@
-<html>
+<!DOCTYPE html>
+<html lang='en'>
 <head>
   <meta charset="UTF-8">
+  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
   <title>Name Generator</title>
+    <link rel='stylesheet' type='text/css' href='/css/reset.css'>
+  <link rel='stylesheet' type='text/css' href='/css/style.css'>
+  <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
 </head>
 <body>
   <header>
-    <h1>Random Name Generator</h1>
+    <div class="nav">
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/months">Months</a></li>
+          <li><a href="/names">Names</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
   <main>
     <div class="container">
-
-      <form method='POST' action='/names' class='generate-form'>
-        <label for='birthMonth_id'> Birth Month
-          <select name="birthMonth_id" id="birthMonthSelect" type='text'>
-            <option value="january">January</option>
-            <option value="february">February</option>
-            <option value="march">March</option>
-            <option value="april">April</option>
-            <option value="may">May</option>
-            <option value="june">June</option>
-            <option value="july">July</option>
-            <option value="august">August</option>
-            <option value="september">September</option>
-            <option value="october">October</option>
-            <option value="november">November</option>
-            <option value="december">December</option>
-          </select>
-        </label>
-        <input type='text' placeholder='First Name' name='FirstName' />
-        <input type='submit' value='Generate!'/>
-      </form>
+      <div class="jumbotron">
+      <h1>Unicorn Name Generator</h1>
+        <form method='POST' action='/names/generate' class='generate-form'>
+          <label for='birthMonth_id'>
+            <select name="birthMonth_id" id="birthMonthSelect" type='text'>
+              <option value="" disabled selected>choose a month</option>
+              <option value="january">January</option>
+              <option value="february">February</option>
+              <option value="march">March</option>
+              <option value="april">April</option>
+              <option value="may">May</option>
+              <option value="june">June</option>
+              <option value="july">July</option>
+              <option value="august">August</option>
+              <option value="september">September</option>
+              <option value="october">October</option>
+              <option value="november">November</option>
+              <option value="december">December</option>
+            </select>
+          </label>
+          <input type='text' placeholder='Name Please!' name='FirstName' />
+          <div id="cloud"><input id='generate-button' type='submit' value='Generate!'/></div>
+        </form>
+      </div>
     </div>
   </main>
   <footer>

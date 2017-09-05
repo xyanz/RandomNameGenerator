@@ -13,6 +13,7 @@ module.exports = {
       FROM names
     `);
   },
+  //Get letter match based on initial
   findLetterMatch(name) {
     name.FirstName = name.FirstName[0];
     console.log(name.FirstName, 'FirstName')
@@ -30,5 +31,40 @@ module.exports = {
       FROM months
       WHERE months.month = $/birthMonth_id/;
       `, month)
-  }
+  },
+  findById(id) {
+    return db.one(`
+      SELECT *
+      FROM names
+      WHERE names.id = $1;
+    `, id);
+  },
+  save(name) {
+    console.log(name);
+    name.id = Number.parseInt(name.id, 10);
+    return db.one(`
+      INSERT INTO names
+      (letter, letterMatch)
+      VALUES
+      ($/letter/, $/letterMatch/)
+      RETURNING *
+    `, name);
+  },
+    update(name) {
+    return db.one(`
+      UPDATE names
+      SET
+      letter = $/letter/,
+      letterMatch = $/letterMatch/
+      WHERE id = $/id/
+      RETURNING *
+    `, name);
+  },
+  destroy(id) {
+    return db.none(`
+      DELETE
+        FROM names
+       WHERE id = $1
+    `, id);
+  },
 }

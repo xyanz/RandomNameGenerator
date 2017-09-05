@@ -6,12 +6,14 @@ const logger = require('morgan');
 const methodOverride = require('method-override');
 const bodyParser = require('body-parser');
 const namesRouter = require('./routes/names');
+const monthsRouter = require('./routes/months');
 const PORT = process.env.PORT || 3000;
 const app = express();
 
 //Set Views
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+app.use( express.static( path.join( __dirname, 'public' )));
 
 // Set up logging
 app.use(logger('dev'));
@@ -29,6 +31,7 @@ app.use(methodOverride('_method'));
 
 /* ROUTES */
 app.use('/names', namesRouter);
+app.use('/months', monthsRouter);
 
 
 app.get('/', (req, res) => {

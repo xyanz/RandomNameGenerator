@@ -1,14 +1,15 @@
+<% include ../partials/boilerplate %>
 
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>Name Generator</title>
-</head>
-<body>
-  <% for (let name of data) { %>
-    <div class='name'>
-      <p><%= name.letter %> : <%= name.lettermatch %></p>
-    </div>
+<div class="container-partial">
+  <button id='partial-button'>
+    <a href="/names/new">Add letter</a>
+  </button>
+    <% for (let name of data) { %>
+      <div class='data'>
+      <a href='/names/<%= name.id%>'>
+        <p id="data"><%= name.letter %> : <%= name.lettermatch %></p>
+        </a>
+      </div>
   <% } %>
-</body>
-</html>
+</div>
+<% include ../partials/footer %>

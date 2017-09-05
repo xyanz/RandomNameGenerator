@@ -7,8 +7,7 @@ DROP TABLE IF EXISTS months;
 
 CREATE TABLE generated (
   id SERIAL PRIMARY KEY,
-  generatedFName VARCHAR(255),
-  generatedLName VARCHAR(255)
+  generatedFName VARCHAR(255)
 );
 CREATE TABLE names (
   id SERIAL PRIMARY KEY,

@@ -1,0 +1,12 @@
+<% include ../partials/boilerplate %>
+<div class="container-edit">
+  <form method='POST' action='/names/<%= data.id %>?_method=PUT'>
+    <input name="id" type="hidden" value="<%= data.id %>">
+    <input name='letter' type='text' value='<%= data.letter %>' />
+    <input name='letterMatch' type='text' value='<%= data.lettermatch %>' />
+    </br>
+    <input id="partial-edit-button" type='submit' value='Edit' />
+  </form>
+</div>
+
+<% include ../partials/footer %>

@@ -1,0 +1,16 @@
+<% include ../partials/boilerplate %>
+
+<div class="container-partial">
+  <button id='partial-button'>
+    <a href="/months/new">Add month</a>
+  </button>
+  <% for (let month of data) { %>
+    <div class='data'>
+      <a href='/months/<%= month.id%>'>
+        <p id="data"><%= month.month %> : <%= month.monthmatch %></p>
+      </a>
+    </div>
+  <% } %>
+  </div>
+
+<% include ../partials/footer %>

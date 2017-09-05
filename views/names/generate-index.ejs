@@ -1,13 +1,7 @@
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>Name Generator</title>
-</head>
-<body>
-    <div class='name'>
-      Your generated name is:
-      <p> your : <%=  gen %></p>
-      <p> letter: <%= gen.lettermatch %></p>
-    </div>
-</body>
-</html>
+<% include ../partials/boilerplate %>
+
+  <div class='generate-index'>
+    <h1><%=  gen %></h1>
+    <a id='generate-index-button' href="/">Try again</a>
+  </div>
+<% include ../partials/footer %>
