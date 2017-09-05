@@ -1,4 +1,4 @@
-\c rnd_name_gen_dev
+-- \c rnd_name_gen_dev
 
 INSERT INTO names (letter, letterMatch) VALUES
   ('a', 'Rainbow'),

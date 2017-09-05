@@ -1,4 +1,4 @@
-\c rnd_name_gen_dev;
+-- \c rnd_name_gen_dev;
 DROP TABLE IF EXISTS generated;
 DROP TABLE IF EXISTS names;
 DROP TABLE IF EXISTS months;
