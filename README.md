@@ -2,7 +2,7 @@
 
 ### How it works
 
-Input Favorite Color, Street you grew up on, favorite number, first inital of name, birth month
+Input Month, Street you grew up on, favorite number, first inital of name, birth month
 Generate "Random" Name based on first letter/number
 Save Name
 Repeat for Family Member, Friend, Pet to create Band/Team Name
@@ -11,7 +11,7 @@ Repeat for Family Member, Friend, Pet to create Band/Team Name
 ![Table Layout](kate_table_pic.jpg)
 
 #### Table #1
-Store color, ABC for street letters, numbers
+Store month, ('ABC...') for initials
 
 #### Table #2
 Name Generated, Pet/Friend Name, Band/Team Name
